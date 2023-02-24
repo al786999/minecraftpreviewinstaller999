@@ -223,7 +223,7 @@ Update_Server() {
   # Retrieve latest version of Minecraft Bedrock dedicated server
   echo "Checking for the latest version of Minecraft Preview Bedrock server..."
   curl -H "Accept-Encoding: identity" -H "Accept-Language: en" -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.33 (KHTML, like Gecko) Chrome/90.0.$RandNum.212 Safari/537.33" -o downloads/version.html https://minecraft.net/en-us/download/server/bedrock/
-  DownloadURL=$(grep -o 'https://minecraft.azureedge.net/bin-linux-preview/[^"]*' downloads/version.html)
+  DownloadURL=$(https://minecraft.azureedge.net/bin-linux-preview/bedrock-server-1.19.70.23.zip)
   DownloadFile=$(echo "$DownloadURL" | sed 's#.*/##')
   echo "$DownloadURL"
   echo "$DownloadFile"
